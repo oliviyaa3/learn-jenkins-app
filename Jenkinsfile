@@ -58,11 +58,7 @@ pipeline {
                         '''
                         
                     }
-                    post {
-                        always {
-                            //publishHTML
-                        }
-                    }
+
                 }
             }
         }
