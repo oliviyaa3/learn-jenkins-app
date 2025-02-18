@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'node:18-alphine'
+                    image 'node:18-alpine'
                     reuseNode true
                 }
             }
@@ -40,7 +40,6 @@ pipeline {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
                     reuseNode true
-                    args '-u root:root'
                 }
             }
             steps {
